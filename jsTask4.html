@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Task-4</title>
+    <style>
+      body {
+        text-align: center;
+        background: linear-gradient(to right, orange, white, green);
+      }
+      h1 {
+        color: blue;
+        font-size: 50px;
+      }
+      button {
+        padding: 10px;
+        color: blue;
+        background-color: lightblue;
+      }
+      label {
+        color: black;
+        font-family: cursive;
+      }
+      p {
+        color: blue;
+        font-size: x-large;
+        font-family: cursive;
+      }
+    </style>
+</head>
+<body>
+    <body>
+      <h1>Date and Time</h1>
+        <button id="showdate" onclick="showdate()">Show Date</button>
+        <p id="date-result"></p><br><br>
+        <button id="showtime" onclick="showTime()">Show Time</button>
+        <p id="time-result"></p>
+        <script>
+        
+        function showdate(){
+                let date=document.getElementById("showtime");
+                date= new Date();
+                const months = [
+                    "January", "February", 
+                    "March", "April", "May", 
+                    "June", "July", "August",
+                    "September", "October", 
+                    "November", "December"
+                ];
+                document.getElementById("date-result").innerHTML=date.getDate()+"/"+months[date.getMonth()]+"/"+date.getFullYear();
+            }
+        
+        function showTime(){
+                let date=document.getElementById("showdate");
+                date= new Date();
+                document.getElementById("time-result").innerHTML=date;
+            }
+            
+        </script>
+    
+</body>
+</html>
